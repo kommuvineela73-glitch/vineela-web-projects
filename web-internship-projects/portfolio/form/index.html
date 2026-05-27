@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+    <div class="hero-text">
+    <h1>Hi, I'm Vineela 👋</h1>
+    <h2><span id="typing"></span></h2>
+    <p>Frontend Developer | UI Designer | CS Student</p>
+</div>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Contact Form</h1>
+
+        <form id="myForm">
+
+            <input type="text" id="name" placeholder="Enter Name">
+
+            <input type="email" id="email" placeholder="Enter Email">
+
+            <input type="text" id="phone" placeholder="Enter Phone Number">
+
+            <textarea id="message" placeholder="Enter Message"></textarea>
+
+            <button type="submit">Submit</button>
+
+        </form>
+
+        <p id="error"></p>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+let text = "Web Developer | Frontend Developer | CS Student";
+let i = 0;
+
+function typeEffect() {
+    if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 80);
+    }
+}
+
+typeEffect();
+</script>
+
+</body>
+</html>

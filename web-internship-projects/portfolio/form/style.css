@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Form box */
+.container {
+    background: white;
+    padding: 30px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Inputs */
+input,
+textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Button */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Error text */
+#error {
+    color: red;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* HERO TEXT */
+.hero-text h1 {
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+.hero-text h2 {
+    color: #173598;
+}
+
+/* NAVBAR IMPROVE */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* HERO IMAGE ANIMATION */
+img {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* SECTION CARDS */
+section {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+/* SKILLS CHIPS */
+ul li {
+    background: linear-gradient(135deg, #1007cd, #3f01ab);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* BUTTON GLOW */
+button {
+    box-shadow: 0 10px 20px rgba(59,130,246,0.3);
+}

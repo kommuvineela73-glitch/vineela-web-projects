@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Header -->
+    <header id="home">
+        <img src="photo.jpg" alt="My Photo">
+
+        <h1>Hi, I'm Vineela 👋</h1>
+        <h2><span id="typing"></span></h2>
+
+        <p>Web Development Intern</p>
+
+        <a href="resume.pdf" download>
+            <button>Download Resume</button>
+        </a>
+    </header>
+
+    <!-- About -->
+ <section id="about">
+
+    <h2>About Me</h2>
+
+    <p>
+        Hello! I am <b>Vineela</b>, a passionate and enthusiastic Computer Science student
+        with a strong interest in Web Development and Front-End Designing.
+        I enjoy creating modern, responsive, and user-friendly websites using
+        HTML, CSS, and JavaScript.
+    </p>
+
+    <p>
+        I am currently improving my skills by building real-world projects and
+        learning modern web technologies. During my Web Development Internship,
+        I successfully developed projects such as a Personal Portfolio Website,
+        Responsive Landing Page, Image Gallery, and Contact Form Validation.
+        These projects helped me gain practical knowledge in website structure,
+        styling, responsive design, and basic JavaScript functionality.
+    </p>
+
+    <p>
+        I believe that continuous learning and hands-on practice are the keys
+        to becoming a successful developer. I am always excited to explore new
+        technologies, improve my problem-solving skills, and create better user
+        experiences through clean and attractive UI designs.
+    </p>
+
+    <p>
+        My goal is to become a skilled Front-End Developer and work on innovative
+        projects that help users and businesses. I am passionate about designing
+        websites that are visually appealing, responsive across devices, and easy
+        to use.
+    </p>
+
+    <p>
+        Apart from coding, I enjoy learning new technical concepts, exploring
+        creative UI ideas, and improving my communication and teamwork skills.
+        I am highly motivated to grow in the field of technology and contribute
+        to real-world projects in the future.
+    </p>
+
+</section>
+<section id="skills">
+
+    <h2>My Skills</h2>
+
+    <ul id="skillList">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>Responsive Design</li>
+        <li>Python</li>
+        <li>GitHub</li>
+        <li>VS Code</li>
+        <li>Frontend Development</li>
+    </ul>
+
+    <input type="text" id="newSkill" placeholder="Add new skill">
+
+    <button onclick="addSkill()">Add Skill</button>
+
+</section>
+    <!-- Projects -->
+   <section id="projects">
+
+    <h2>My Projects</h2>
+
+    <div class="project-card">
+        <h3>🌐 Portfolio Website</h3>
+
+        <p>
+            Developed a personal portfolio website using HTML, CSS, and JavaScript
+            to showcase my skills, projects, resume, and contact information.
+            The website includes responsive design, smooth navigation, typing
+            animation effects, and a professional user interface.
+        </p>
+    </div>
+
+    <div class="project-card">
+        <h3>🚀 Responsive Landing Page</h3>
+
+        <p>
+            Created a modern and responsive landing page with attractive UI
+            components, hover effects, gradient backgrounds, and responsive layouts.
+            This project helped me understand webpage structure, alignment,
+            responsiveness, and user experience design.
+        </p>
+    </div>
+
+    <div class="project-card">
+        <h3>🖼️ Image Gallery</h3>
+
+        <p>
+            Built an interactive image gallery using CSS Grid layout and hover
+            animations. The gallery is fully responsive and adjusts perfectly
+            for desktop and mobile devices while maintaining a clean and modern look.
+        </p>
+    </div>
+
+    <div class="project-card">
+        <h3>📩 Contact Form Validation</h3>
+
+        <p>
+            Designed and developed a contact form with basic JavaScript validation.
+            The form checks user input fields such as name, email, and message,
+            helping improve form usability and user interaction.
+        </p>
+    </div>
+
+</section>
+
+    <section id="contact">
+
+    <h2>Contact Me</h2>
+
+    <p>📧 Email:kommuvineela@gmail.com</p>
+
+    <p>💻 GitHub:
+        <a href="https://github.com/kommuvineela73-glitch" target="_blank">
+            github.com/kommuvineela73-glitch
+        </a>
+    </p>
+
+    <p>🔗 LinkedIn:
+        <a href="https://linkedin.com" target="_blank">
+            My LinkedIn Profile
+        </a>
+    </p>
+
+    <p>📍 Telangana, India</p>
+
+</section>
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Vineela | All Rights Reserved</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function addSkill() {
+
+            let skillInput = document.getElementById("newSkill");
+            let skillValue = skillInput.value;
+
+            if (skillValue !== "") {
+
+                let li = document.createElement("li");
+                li.textContent = skillValue;
+
+                document.getElementById("skillList").appendChild(li);
+
+                skillInput.value = "";
+            }
+        }
+
+        /* Typing Effect */
+        let text = "Web Developer | Frontend Learner | CS Student";
+        let i = 0;
+
+        function typeEffect() {
+            if (i < text.length) {
+                document.getElementById("typing").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeEffect, 100);
+            }
+        }
+
+        typeEffect();
+    </script>
+
+</body>
+</html>
